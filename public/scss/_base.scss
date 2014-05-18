@@ -1,0 +1,52 @@
+body{
+	
+	font-family: $fontfam;
+	background-image: url('../images/dust.png');
+}
+
+.container{
+	max-width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	padding: 50px 0px 0px 0px;
+
+	header{
+		min-width: 280px;
+		padding-bottom: 10px;
+		margin-bottom: 20px;
+		border-bottom: 1.5px dashed $link-color;
+
+		h1{
+			@include font-size(1.4);
+			color: $header-color;
+			display: inline-block;
+			margin-right: 5px;
+			vertical-align: middle;
+		}
+
+		a{
+			display: inline-block;
+			text-decoration: none;
+			background-color: $link-color;
+			color: white;
+			@include font-size(0.7);
+			text-transform: uppercase;
+			padding: 6px;
+			@include border-radius(4px);
+			vertical-align: middle;
+		}
+
+		form{
+			display: inline-block;
+			#logout{
+				@extend a;
+				border-color: none;
+				border: none;
+				outline: none;
+				outline-width:0;
+			}
+		}
+		
+	}
+}

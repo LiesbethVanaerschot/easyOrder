@@ -1,0 +1,532 @@
+/*ALGEMEEN*/
+/*MENU*/
+/*ORDER*/
+/*FEEDBACK*/
+body {
+  font-family: "Helvetica Neue", sans-serif;
+  background-image: url("../images/dust.png"); }
+
+.container {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: 50px 0px 0px 0px; }
+  .container header {
+    min-width: 280px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1.5px dashed rgba(3, 136, 146, 0.7); }
+    .container header h1 {
+      font-size: 14px;
+      font-size: 1.4rem;
+      color: #025960;
+      display: inline-block;
+      margin-right: 5px;
+      vertical-align: middle; }
+    .container header a, .container header form #logout, .container header #menu .large-accordion #eten, #menu .large-accordion .container header #eten, .container header #menu .large-accordion #drink, #menu .large-accordion .container header #drink, .container header #menu .accordion > :last-child a, #menu .accordion > :last-child .container header a {
+      display: inline-block;
+      text-decoration: none;
+      background-color: rgba(3, 136, 146, 0.7);
+      color: white;
+      font-size: 7px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      padding: 6px;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      border-radius: 4px;
+      vertical-align: middle; }
+    .container header form {
+      display: inline-block; }
+      .container header form #logout {
+        border-color: none;
+        border: none;
+        outline: none;
+        outline-width: 0; }
+
+#menu {
+  min-width: 280px;
+  margin-top: 20px;
+  cursor: pointer; }
+  #menu .large-accordion > li, #menu #alles .orderitem .ordercontent ul .large-accordion > li:nth-of-type(1), #alles .orderitem .ordercontent ul #menu .large-accordion > li:nth-of-type(1), #menu #alles .orderitem .ordercontent ul .large-accordion > li:nth-of-type(2), #alles .orderitem .ordercontent ul #menu .large-accordion > li:nth-of-type(2), #menu #alles .orderitem .ordercontent ul .large-accordion > li:nth-of-type(3), #alles .orderitem .ordercontent ul #menu .large-accordion > li:nth-of-type(3) {
+    margin-bottom: 5px; }
+  #menu .large-accordion li > .accordion, #menu .large-accordion #alles .orderitem .ordercontent ul li:nth-of-type(1) > .accordion, #alles .orderitem .ordercontent ul #menu .large-accordion li:nth-of-type(1) > .accordion, #menu .large-accordion #alles .orderitem .ordercontent ul li:nth-of-type(2) > .accordion, #alles .orderitem .ordercontent ul #menu .large-accordion li:nth-of-type(2) > .accordion, #menu .large-accordion #alles .orderitem .ordercontent ul li:nth-of-type(3) > .accordion, #alles .orderitem .ordercontent ul #menu .large-accordion li:nth-of-type(3) > .accordion {
+    display: none; }
+  #menu .large-accordion li:target > .accordion, #menu .large-accordion #alles .orderitem .ordercontent ul li:target:nth-of-type(1) > .accordion, #alles .orderitem .ordercontent ul #menu .large-accordion li:target:nth-of-type(1) > .accordion, #menu .large-accordion #alles .orderitem .ordercontent ul li:target:nth-of-type(2) > .accordion, #alles .orderitem .ordercontent ul #menu .large-accordion li:target:nth-of-type(2) > .accordion, #menu .large-accordion #alles .orderitem .ordercontent ul li:target:nth-of-type(3) > .accordion, #alles .orderitem .ordercontent ul #menu .large-accordion li:target:nth-of-type(3) > .accordion {
+    display: block; }
+  #menu .large-accordion .lijst, #menu .large-accordion .accordion a, #menu .accordion .large-accordion a, #menu .large-accordion .accordion .container header form #logout, #menu .accordion .container header form .large-accordion #logout, .container header form #menu .large-accordion .accordion #logout, .container header form #menu .accordion .large-accordion #logout, #menu .accordion .large-accordion #eten, #menu .large-accordion .accordion #eten, #menu .accordion .large-accordion #drink, #menu .large-accordion .accordion #drink, #menu .large-accordion .miniaccordion .koffie, #menu .miniaccordion .large-accordion .koffie, #menu .large-accordion .miniaccordion > :last-child a, #menu .miniaccordion > :last-child .large-accordion a, #menu .large-accordion .miniaccordion > :last-child .container header form #logout, #menu .miniaccordion > :last-child .container header form .large-accordion #logout, .container header form #menu .large-accordion .miniaccordion > :last-child #logout, .container header form #menu .miniaccordion > :last-child .large-accordion #logout, #menu .miniaccordion > :last-child .large-accordion #eten, #menu .large-accordion .miniaccordion > :last-child #eten, #menu .miniaccordion > :last-child .large-accordion #drink, #menu .large-accordion .miniaccordion > :last-child #drink {
+    display: inline-block;
+    /*height: 25px;*/
+    padding: 10px 5px 10px 5px;
+    text-align: left;
+    text-transform: uppercase; }
+  #menu .large-accordion #eten, #menu .large-accordion #drink {
+    background-color: #ffe491;
+    border: 3px solid #ffdf80;
+    font-size: 16px;
+    font-size: 1.6rem;
+    color: #fff;
+    margin-bottom: 5px;
+    width: 278px; }
+  #menu .accordion li > .miniaccordion, #menu .accordion #alles .orderitem .ordercontent ul li:nth-of-type(1) > .miniaccordion, #alles .orderitem .ordercontent ul #menu .accordion li:nth-of-type(1) > .miniaccordion, #menu .accordion #alles .orderitem .ordercontent ul li:nth-of-type(2) > .miniaccordion, #alles .orderitem .ordercontent ul #menu .accordion li:nth-of-type(2) > .miniaccordion, #menu .accordion #alles .orderitem .ordercontent ul li:nth-of-type(3) > .miniaccordion, #alles .orderitem .ordercontent ul #menu .accordion li:nth-of-type(3) > .miniaccordion {
+    display: none; }
+  #menu .accordion li:target > .miniaccordion, #menu .accordion #alles .orderitem .ordercontent ul li:target:nth-of-type(1) > .miniaccordion, #alles .orderitem .ordercontent ul #menu .accordion li:target:nth-of-type(1) > .miniaccordion, #menu .accordion #alles .orderitem .ordercontent ul li:target:nth-of-type(2) > .miniaccordion, #alles .orderitem .ordercontent ul #menu .accordion li:target:nth-of-type(2) > .miniaccordion, #menu .accordion #alles .orderitem .ordercontent ul li:target:nth-of-type(3) > .miniaccordion, #alles .orderitem .ordercontent ul #menu .accordion li:target:nth-of-type(3) > .miniaccordion {
+    display: block; }
+  #menu .accordion a, #menu .accordion .container header form #logout, .container header form #menu .accordion #logout, #menu .accordion .large-accordion #eten, #menu .large-accordion .accordion #eten, #menu .accordion .large-accordion #drink, #menu .large-accordion .accordion #drink, #menu .accordion > :last-child a {
+    margin-top: 1px;
+    margin-bottom: -1px;
+    border-top: 1.5px dashed #038892;
+    border-left: 1.5px dashed #038892;
+    border-right: 1.5px dashed #038892;
+    width: 280px; }
+  #menu .accordion > :last-child .container header form #logout, .container header form #menu .accordion > :last-child #logout, #menu .accordion > :last-child .large-accordion #eten, #menu .large-accordion .accordion > :last-child #eten, #menu .accordion > :last-child .large-accordion #drink, #menu .large-accordion .accordion > :last-child #drink, #menu .accordion > :last-child a {
+    border-bottom: 1.5px dashed #038892; }
+  #menu .accordion a:hover, #menu .accordion .container header form #logout:hover, .container header form #menu .accordion #logout:hover, #menu .accordion .large-accordion #eten:hover, #menu .large-accordion .accordion #eten:hover, #menu .accordion .large-accordion #drink:hover, #menu .large-accordion .accordion #drink:hover {
+    background-color: rgba(3, 136, 146, 0.5); }
+  #menu .miniaccordion li > .mini-sub, #menu .miniaccordion #alles .orderitem .ordercontent ul li:nth-of-type(1) > .mini-sub, #alles .orderitem .ordercontent ul #menu .miniaccordion li:nth-of-type(1) > .mini-sub, #menu .miniaccordion #alles .orderitem .ordercontent ul li:nth-of-type(2) > .mini-sub, #alles .orderitem .ordercontent ul #menu .miniaccordion li:nth-of-type(2) > .mini-sub, #menu .miniaccordion #alles .orderitem .ordercontent ul li:nth-of-type(3) > .mini-sub, #alles .orderitem .ordercontent ul #menu .miniaccordion li:nth-of-type(3) > .mini-sub {
+    display: none; }
+  #menu .miniaccordion li:target > .mini-sub, #menu .miniaccordion #alles .orderitem .ordercontent ul li:target:nth-of-type(1) > .mini-sub, #alles .orderitem .ordercontent ul #menu .miniaccordion li:target:nth-of-type(1) > .mini-sub, #menu .miniaccordion #alles .orderitem .ordercontent ul li:target:nth-of-type(2) > .mini-sub, #alles .orderitem .ordercontent ul #menu .miniaccordion li:target:nth-of-type(2) > .mini-sub, #menu .miniaccordion #alles .orderitem .ordercontent ul li:target:nth-of-type(3) > .mini-sub, #alles .orderitem .ordercontent ul #menu .miniaccordion li:target:nth-of-type(3) > .mini-sub {
+    display: block; }
+  #menu .miniaccordion .koffie, #menu .miniaccordion > :last-child a, #menu .miniaccordion > :last-child .container header form #logout, .container header form #menu .miniaccordion > :last-child #logout, #menu .miniaccordion > :last-child .large-accordion #eten, #menu .large-accordion .miniaccordion > :last-child #eten, #menu .miniaccordion > :last-child .large-accordion #drink, #menu .large-accordion .miniaccordion > :last-child #drink {
+    margin-top: 1px;
+    margin-bottom: -1px;
+    border-top: 1.5px dashed #04b7c4;
+    border-left: 1.5px dashed #04b7c4;
+    border-right: 1.5px dashed #04b7c4;
+    min-width: 280px; }
+  #menu .miniaccordion > :first-child a, #menu .miniaccordion > :first-child .container header form #logout, .container header form #menu .miniaccordion > :first-child #logout, #menu .miniaccordion > :first-child .large-accordion #eten, #menu .large-accordion .miniaccordion > :first-child #eten, #menu .miniaccordion > :first-child .large-accordion #drink, #menu .large-accordion .miniaccordion > :first-child #drink {
+    margin-top: 5px; }
+  #menu .miniaccordion > :last-child a, #menu .miniaccordion > :last-child .container header form #logout, .container header form #menu .miniaccordion > :last-child #logout, #menu .miniaccordion > :last-child .large-accordion #eten, #menu .large-accordion .miniaccordion > :last-child #eten, #menu .miniaccordion > :last-child .large-accordion #drink, #menu .large-accordion .miniaccordion > :last-child #drink {
+    border-bottom: 1.5px dashed #04b7c4;
+    margin-bottom: 5px; }
+  #menu .miniaccordion .koffie:hover, #menu .miniaccordion > :last-child a:hover, #menu .miniaccordion > :last-child .container header form #logout:hover, .container header form #menu .miniaccordion > :last-child #logout:hover, #menu .miniaccordion > :last-child .large-accordion #eten:hover, #menu .large-accordion .miniaccordion > :last-child #eten:hover, #menu .miniaccordion > :last-child .large-accordion #drink:hover, #menu .large-accordion .miniaccordion > :last-child #drink:hover {
+    background-color: rgba(4, 183, 196, 0.5); }
+  #menu .miniaccordion .product, #menu .miniaccordion .product:last-of-type {
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    width: 280px;
+    padding: 0px 5px 0px 5px;
+    border-top: 2px solid #ff4200;
+    border-left: 2px solid #ff4200;
+    border-right: 2px solid #ff4200;
+    height: 36px;
+    font-size: 8px;
+    font-size: 0.8rem; }
+    #menu .miniaccordion .product div, #menu .miniaccordion .product:last-of-type div, #menu .miniaccordion .product .item {
+      display: inline-block;
+      vertical-align: middle; }
+    #menu .miniaccordion .product .item {
+      /*position: relative;
+      left: 10px;*/ }
+    #menu .miniaccordion .product div:nth-of-type(1), #menu .miniaccordion .product .item:nth-of-type(1) {
+      padding: 11px 0px 11px 0px;
+      height: 14px;
+      position: relative;
+      left: -30px; }
+    #menu .miniaccordion .product div:nth-of-type(2), #menu .miniaccordion .product .item:nth-of-type(2) {
+      padding: 11px 5px 11px 0px;
+      height: 14px;
+      float: left;
+      position: relative;
+      left: 210px; }
+    #menu .miniaccordion .product div:nth-of-type(3), #menu .miniaccordion .product .item:nth-of-type(3) {
+      float: right;
+      padding: 4px 0px 4px 0px;
+      position: relative;
+      left: -5px; }
+      #menu .miniaccordion .product div:nth-of-type(3) input, #menu .miniaccordion .product .item:nth-of-type(3) input {
+        width: 13px;
+        height: 24px;
+        padding: 0px 5px 0px 5px;
+        text-align: right;
+        vertical-align: middle;
+        border: 3px solid #ff8155;
+        outline-style: none;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        -ms-border-radius: 6px;
+        border-radius: 6px; }
+  #menu .miniaccordion .product:nth-of-type(1) {
+    margin-top: 5px; }
+  #menu .miniaccordion .product:last-of-type {
+    border-bottom: 2px solid #ff4200;
+    margin-bottom: 5px; }
+
+.bestel {
+  background-color: rgba(255, 66, 0, 0.8);
+  color: white;
+  font-weight: bold; }
+
+.active {
+  background-color: rgba(3, 136, 146, 0.5);
+  border-bottom: 1.5px dashed #038892; }
+
+.mini-active {
+  background-color: rgba(4, 183, 196, 0.5);
+  border-bottom: 1.5px dashed #04b7c4; }
+
+#bestelnav {
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto; }
+  #bestelnav form label {
+    font-weight: bold;
+    color: #025960;
+    font-size: 12px;
+    font-size: 1.2rem;
+    position: relative;
+    left: -45px;
+    vertical-align: middle; }
+  #bestelnav form #tafel {
+    width: 20px;
+    height: 30px;
+    padding: 0px 10px 0px 10px;
+    text-align: right;
+    vertical-align: middle;
+    border: 2.5px solid #9fe5b0;
+    outline-style: none;
+    color: #77db8f;
+    font-weight: bold;
+    vertical-align: middle;
+    position: relative;
+    left: -40px;
+    font-size: 12px;
+    font-size: 1.2rem;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    border-radius: 6px; }
+  #bestelnav form #bestel {
+    border-color: none;
+    border: none;
+    outline: none;
+    outline-width: 0;
+    vertical-align: middle;
+    padding: 10px 10px 10px 10px;
+    height: 35px;
+    position: relative;
+    right: -45px;
+    text-transform: uppercase;
+    color: white;
+    background-color: #77db8f;
+    cursor: pointer;
+    font-size: 10px;
+    font-size: 1rem;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    border-radius: 6px; }
+
+#error p, #error #alles .orderitem .wanneer p:nth-of-type(1), #alles .orderitem .wanneer #error p:nth-of-type(1), #error #alles .orderitem .wanneer p:nth-of-type(2), #alles .orderitem .wanneer #error p:nth-of-type(2), #error #alles .orderitem .wanneer p:nth-of-type(3), #alles .orderitem .wanneer #error p:nth-of-type(3) {
+  border: 2px solid #ff6833;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #ff8155;
+  color: white;
+  font-weight: bold;
+  width: 280px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 5px 10px 5px; }
+
+#feedbackcontent {
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto; }
+  #feedbackcontent h3 {
+    font-size: 14px;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: #454656; }
+  #feedbackcontent .wacht {
+    margin-bottom: 40px;
+    padding: 0px 10px 0px 10px;
+    font-size: 8px;
+    font-size: 0.8rem;
+    color: #454656; }
+  #feedbackcontent #movingBallG {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    height: 8px; }
+    #feedbackcontent #movingBallG .movingBallLineG {
+      position: absolute;
+      left: 0px;
+      top: 3px;
+      height: 1px;
+      width: 100px;
+      background-color: #EB6B09; }
+    #feedbackcontent #movingBallG .movingBallG {
+      background-color: #EB6B09;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 10px;
+      height: 10px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      border-radius: 50%;
+      -webkit-animation-name: bounce_movingBallG;
+      -moz-animation-name: bounce_movingBallG;
+      -ms-animation-name: bounce_movingBallG;
+      animation-name: bounce_movingBallG;
+      -webkit-animation-duration: 2.6s;
+      -moz-animation-duration: 2.6s;
+      -ms-animation-duration: 2.6s;
+      animation-duration: 2.6s;
+      -webkit-animation-iteration-count: infinite;
+      -moz-animation-iteration-count: infinite;
+      -ms-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      -webkit-animation-direction: linear;
+      -moz-animation-direction: linear;
+      -ms-animation-direction: linear;
+      animation-direction: linear; }
+  #feedbackcontent #feedback {
+    border: 2px dotted #ff8155;
+    padding: 10px 5px 10px 5px;
+    margin: 0px 10px 0px 10px;
+    color: #454656; }
+    #feedbackcontent #feedback span {
+      text-transform: uppercase;
+      color: #ff8155;
+      font-size: 12px;
+      font-size: 1.2rem;
+      margin: 5px 0px 5px 0px; }
+
+#terugmenu {
+  margin-top: 50px;
+  text-transform: uppercase;
+  color: #025960;
+  font-weight: bold; }
+  #terugmenu a, #terugmenu .container header form #logout, .container header form #terugmenu #logout, #terugmenu #menu .large-accordion #eten, #menu .large-accordion #terugmenu #eten, #terugmenu #menu .large-accordion #drink, #menu .large-accordion #terugmenu #drink, #terugmenu #menu .accordion > :last-child a, #menu .accordion > :last-child #terugmenu a {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    width: 80px;
+    padding: 5px;
+    background-color: #ffe491;
+    text-decoration: none;
+    color: white;
+    font-weight: normal;
+    font-size: 14px;
+    font-size: 1.4rem;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    border-radius: 6px; }
+
+@-moz-keyframes bounce_movingBallG {
+  0% {
+    left: 0px; }
+
+  50% {
+    left: 92px; }
+
+  100% {
+    left: 0px; } }
+@-webkit-keyframes bounce_movingBallG {
+  0% {
+    left: 0px; }
+
+  50% {
+    left: 92px; }
+
+  100% {
+    left: 0px; } }
+@-ms-keyframes bounce_movingBallG {
+  0% {
+    left: 0px; }
+
+  50% {
+    left: 92px; }
+
+  100% {
+    left: 0px; } }
+@-o-keyframes bounce_movingBallG {
+  0% {
+    left: 0px; }
+
+  50% {
+    left: 92px; }
+
+  100% {
+    left: 0px; } }
+@keyframes bounce_movingBallG {
+  0% {
+    left: 0px; }
+
+  50% {
+    left: 92px; }
+
+  100% {
+    left: 0px; } }
+.tabs {
+  text-align: left;
+  margin-bottom: 20px; }
+  .tabs ul li, .tabs #alles .orderitem .ordercontent ul li:nth-of-type(1), #alles .orderitem .ordercontent .tabs ul li:nth-of-type(1), .tabs #alles .orderitem .ordercontent ul li:nth-of-type(2), #alles .orderitem .ordercontent .tabs ul li:nth-of-type(2), .tabs #alles .orderitem .ordercontent ul li:nth-of-type(3), #alles .orderitem .ordercontent .tabs ul li:nth-of-type(3) {
+    display: inline-block;
+    margin: 5px;
+    padding: 8px;
+    background-color: #ff8155;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px; }
+    .tabs ul li a, .tabs #alles .orderitem .ordercontent ul li:nth-of-type(1) a, #alles .orderitem .ordercontent .tabs ul li:nth-of-type(1) a, .tabs #alles .orderitem .ordercontent ul li:nth-of-type(2) a, #alles .orderitem .ordercontent .tabs ul li:nth-of-type(2) a, .tabs #alles .orderitem .ordercontent ul li:nth-of-type(3) a, #alles .orderitem .ordercontent .tabs ul li:nth-of-type(3) a, .tabs ul li .container header form #logout, .container header form .tabs ul li #logout, .tabs #alles .orderitem .ordercontent ul li:nth-of-type(1) .container header form #logout, .container header form .tabs #alles .orderitem .ordercontent ul li:nth-of-type(1) #logout, #alles .orderitem .ordercontent .tabs ul li:nth-of-type(1) .container header form #logout, .container header form #alles .orderitem .ordercontent .tabs ul li:nth-of-type(1) #logout, .tabs #alles .orderitem .ordercontent ul li:nth-of-type(2) .container header form #logout, .container header form .tabs #alles .orderitem .ordercontent ul li:nth-of-type(2) #logout, #alles .orderitem .ordercontent .tabs ul li:nth-of-type(2) .container header form #logout, .container header form #alles .orderitem .ordercontent .tabs ul li:nth-of-type(2) #logout, .tabs #alles .orderitem .ordercontent ul li:nth-of-type(3) .container header form #logout, .container header form .tabs #alles .orderitem .ordercontent ul li:nth-of-type(3) #logout, #alles .orderitem .ordercontent .tabs ul li:nth-of-type(3) .container header form #logout, .container header form #alles .orderitem .ordercontent .tabs ul li:nth-of-type(3) #logout, .tabs ul li #menu .large-accordion #eten, #menu .large-accordion .tabs ul li #eten, .tabs ul li #menu .large-accordion #drink, #menu .large-accordion .tabs ul li #drink, .tabs ul li #menu .accordion > :last-child a, #menu .accordion > :last-child .tabs ul li a {
+      text-decoration: none;
+      font-size: 11px;
+      font-size: 1.1rem;
+      color: white;
+      text-transform: uppercase;
+      cursor: pointer; }
+  .tabs ul .tabactive {
+    background-color: #ff4200; }
+
+.tab {
+  display: none; }
+
+.tab.tabactive {
+  display: block; }
+
+#orders ul {
+  border: 1px dashed #35c858;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 0px 0px 10px 0px;
+  text-align: left; }
+  #orders ul li, #orders #alles .orderitem .ordercontent ul li:nth-of-type(1), #alles .orderitem .ordercontent #orders ul li:nth-of-type(1), #orders #alles .orderitem .ordercontent ul li:nth-of-type(2), #alles .orderitem .ordercontent #orders ul li:nth-of-type(2), #orders #alles .orderitem .ordercontent ul li:nth-of-type(3), #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) {
+    padding: 5px;
+    height: 20px; }
+    #orders ul li .neworder, #orders #alles .orderitem .ordercontent ul li:nth-of-type(1) .neworder, #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) .neworder, #orders #alles .orderitem .ordercontent ul li:nth-of-type(2) .neworder, #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) .neworder, #orders #alles .orderitem .ordercontent ul li:nth-of-type(3) .neworder, #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) .neworder, #orders ul li .tafel, #orders #alles .orderitem .ordercontent ul li:nth-of-type(1) .tafel, #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) .tafel, #orders #alles .orderitem .ordercontent ul li:nth-of-type(2) .tafel, #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) .tafel, #orders #alles .orderitem .ordercontent ul li:nth-of-type(3) .tafel, #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) .tafel, #orders #alles .orderitem .ordercontent ul li:nth-of-type(1) .tafel, #orders #alles .orderitem .ordercontent ul li:nth-of-type(1) .tafel, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) .tafel, #orders #alles .orderitem .ordercontent ul li:nth-of-type(2) li:nth-of-type(1) .tafel, #orders #alles .orderitem .ordercontent ul li:nth-of-type(1) li:nth-of-type(2) .tafel, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) li:nth-of-type(1) .tafel, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) li:nth-of-type(2) .tafel, #orders #alles .orderitem .ordercontent ul li:nth-of-type(3) li:nth-of-type(1) .tafel, #orders #alles .orderitem .ordercontent ul li:nth-of-type(1) li:nth-of-type(3) .tafel, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) li:nth-of-type(1) .tafel, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) li:nth-of-type(3) .tafel, #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) .tafel, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) .tafel, #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) .tafel, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) li:nth-of-type(1) .tafel, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) li:nth-of-type(2) .tafel, #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) li:nth-of-type(1) .tafel, #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) li:nth-of-type(2) .tafel, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) li:nth-of-type(1) .tafel, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) li:nth-of-type(3) .tafel, #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) li:nth-of-type(1) .tafel, #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) li:nth-of-type(3) .tafel, #orders #alles .orderitem .ordercontent ul li:nth-of-type(2) .tafel, #orders #alles .orderitem .ordercontent ul li:nth-of-type(1) li:nth-of-type(2) .tafel, #orders #alles .orderitem .ordercontent ul li:nth-of-type(2) li:nth-of-type(1) .tafel, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) li:nth-of-type(2) .tafel, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) li:nth-of-type(1) .tafel, #orders #alles .orderitem .ordercontent ul li:nth-of-type(2) .tafel, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) .tafel, #orders #alles .orderitem .ordercontent ul li:nth-of-type(3) li:nth-of-type(2) .tafel, #orders #alles .orderitem .ordercontent ul li:nth-of-type(2) li:nth-of-type(3) .tafel, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) li:nth-of-type(2) .tafel, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) li:nth-of-type(3) .tafel, #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) .tafel, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) li:nth-of-type(2) .tafel, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) li:nth-of-type(1) .tafel, #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) li:nth-of-type(2) .tafel, #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) li:nth-of-type(1) .tafel, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) .tafel, #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) .tafel, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) li:nth-of-type(2) .tafel, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) li:nth-of-type(3) .tafel, #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) li:nth-of-type(2) .tafel, #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) li:nth-of-type(3) .tafel, #orders #alles .orderitem .ordercontent ul li:nth-of-type(3) .tafel, #orders #alles .orderitem .ordercontent ul li:nth-of-type(1) li:nth-of-type(3) .tafel, #orders #alles .orderitem .ordercontent ul li:nth-of-type(3) li:nth-of-type(1) .tafel, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) li:nth-of-type(3) .tafel, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) li:nth-of-type(1) .tafel, #orders #alles .orderitem .ordercontent ul li:nth-of-type(2) li:nth-of-type(3) .tafel, #orders #alles .orderitem .ordercontent ul li:nth-of-type(3) li:nth-of-type(2) .tafel, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) li:nth-of-type(3) .tafel, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) li:nth-of-type(2) .tafel, #orders #alles .orderitem .ordercontent ul li:nth-of-type(3) .tafel, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) .tafel, #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) .tafel, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) li:nth-of-type(3) .tafel, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) li:nth-of-type(1) .tafel, #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) li:nth-of-type(3) .tafel, #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) li:nth-of-type(1) .tafel, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) li:nth-of-type(3) .tafel, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) li:nth-of-type(2) .tafel, #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) li:nth-of-type(3) .tafel, #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) li:nth-of-type(2) .tafel, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) .tafel, #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) .tafel, #orders ul li .aantal, #orders #alles .orderitem .ordercontent ul li:nth-of-type(1) .aantal, #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) .aantal, #orders #alles .orderitem .ordercontent ul li:nth-of-type(2) .aantal, #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) .aantal, #orders #alles .orderitem .ordercontent ul li:nth-of-type(3) .aantal, #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) .aantal, #orders #alles .orderitem .ordercontent ul li:nth-of-type(1) .aantal, #orders #alles .orderitem .ordercontent ul li:nth-of-type(1) .aantal, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) .aantal, #orders #alles .orderitem .ordercontent ul li:nth-of-type(2) li:nth-of-type(1) .aantal, #orders #alles .orderitem .ordercontent ul li:nth-of-type(1) li:nth-of-type(2) .aantal, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) li:nth-of-type(1) .aantal, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) li:nth-of-type(2) .aantal, #orders #alles .orderitem .ordercontent ul li:nth-of-type(3) li:nth-of-type(1) .aantal, #orders #alles .orderitem .ordercontent ul li:nth-of-type(1) li:nth-of-type(3) .aantal, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) li:nth-of-type(1) .aantal, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) li:nth-of-type(3) .aantal, #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) .aantal, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) .aantal, #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) .aantal, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) li:nth-of-type(1) .aantal, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) li:nth-of-type(2) .aantal, #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) li:nth-of-type(1) .aantal, #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) li:nth-of-type(2) .aantal, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) li:nth-of-type(1) .aantal, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) li:nth-of-type(3) .aantal, #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) li:nth-of-type(1) .aantal, #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) li:nth-of-type(3) .aantal, #orders #alles .orderitem .ordercontent ul li:nth-of-type(2) .aantal, #orders #alles .orderitem .ordercontent ul li:nth-of-type(1) li:nth-of-type(2) .aantal, #orders #alles .orderitem .ordercontent ul li:nth-of-type(2) li:nth-of-type(1) .aantal, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) li:nth-of-type(2) .aantal, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) li:nth-of-type(1) .aantal, #orders #alles .orderitem .ordercontent ul li:nth-of-type(2) .aantal, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) .aantal, #orders #alles .orderitem .ordercontent ul li:nth-of-type(3) li:nth-of-type(2) .aantal, #orders #alles .orderitem .ordercontent ul li:nth-of-type(2) li:nth-of-type(3) .aantal, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) li:nth-of-type(2) .aantal, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) li:nth-of-type(3) .aantal, #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) .aantal, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) li:nth-of-type(2) .aantal, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) li:nth-of-type(1) .aantal, #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) li:nth-of-type(2) .aantal, #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) li:nth-of-type(1) .aantal, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) .aantal, #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) .aantal, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) li:nth-of-type(2) .aantal, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) li:nth-of-type(3) .aantal, #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) li:nth-of-type(2) .aantal, #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) li:nth-of-type(3) .aantal, #orders #alles .orderitem .ordercontent ul li:nth-of-type(3) .aantal, #orders #alles .orderitem .ordercontent ul li:nth-of-type(1) li:nth-of-type(3) .aantal, #orders #alles .orderitem .ordercontent ul li:nth-of-type(3) li:nth-of-type(1) .aantal, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) li:nth-of-type(3) .aantal, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) li:nth-of-type(1) .aantal, #orders #alles .orderitem .ordercontent ul li:nth-of-type(2) li:nth-of-type(3) .aantal, #orders #alles .orderitem .ordercontent ul li:nth-of-type(3) li:nth-of-type(2) .aantal, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) li:nth-of-type(3) .aantal, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) li:nth-of-type(2) .aantal, #orders #alles .orderitem .ordercontent ul li:nth-of-type(3) .aantal, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) .aantal, #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) .aantal, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) li:nth-of-type(3) .aantal, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) li:nth-of-type(1) .aantal, #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) li:nth-of-type(3) .aantal, #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) li:nth-of-type(1) .aantal, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) li:nth-of-type(3) .aantal, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) li:nth-of-type(2) .aantal, #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) li:nth-of-type(3) .aantal, #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) li:nth-of-type(2) .aantal, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) .aantal, #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) .aantal, #orders ul li .it, #orders #alles .orderitem .ordercontent ul li:nth-of-type(1) .it, #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) .it, #orders #alles .orderitem .ordercontent ul li:nth-of-type(2) .it, #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) .it, #orders #alles .orderitem .ordercontent ul li:nth-of-type(3) .it, #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) .it, #orders #alles .orderitem .ordercontent ul li:nth-of-type(1) .it, #orders #alles .orderitem .ordercontent ul li:nth-of-type(1) .it, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) .it, #orders #alles .orderitem .ordercontent ul li:nth-of-type(2) li:nth-of-type(1) .it, #orders #alles .orderitem .ordercontent ul li:nth-of-type(1) li:nth-of-type(2) .it, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) li:nth-of-type(1) .it, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) li:nth-of-type(2) .it, #orders #alles .orderitem .ordercontent ul li:nth-of-type(3) li:nth-of-type(1) .it, #orders #alles .orderitem .ordercontent ul li:nth-of-type(1) li:nth-of-type(3) .it, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) li:nth-of-type(1) .it, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) li:nth-of-type(3) .it, #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) .it, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) .it, #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) .it, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) li:nth-of-type(1) .it, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) li:nth-of-type(2) .it, #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) li:nth-of-type(1) .it, #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) li:nth-of-type(2) .it, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) li:nth-of-type(1) .it, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) li:nth-of-type(3) .it, #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) li:nth-of-type(1) .it, #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) li:nth-of-type(3) .it, #orders #alles .orderitem .ordercontent ul li:nth-of-type(2) .it, #orders #alles .orderitem .ordercontent ul li:nth-of-type(1) li:nth-of-type(2) .it, #orders #alles .orderitem .ordercontent ul li:nth-of-type(2) li:nth-of-type(1) .it, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) li:nth-of-type(2) .it, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) li:nth-of-type(1) .it, #orders #alles .orderitem .ordercontent ul li:nth-of-type(2) .it, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) .it, #orders #alles .orderitem .ordercontent ul li:nth-of-type(3) li:nth-of-type(2) .it, #orders #alles .orderitem .ordercontent ul li:nth-of-type(2) li:nth-of-type(3) .it, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) li:nth-of-type(2) .it, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) li:nth-of-type(3) .it, #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) .it, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) li:nth-of-type(2) .it, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) li:nth-of-type(1) .it, #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) li:nth-of-type(2) .it, #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) li:nth-of-type(1) .it, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) .it, #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) .it, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) li:nth-of-type(2) .it, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) li:nth-of-type(3) .it, #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) li:nth-of-type(2) .it, #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) li:nth-of-type(3) .it, #orders #alles .orderitem .ordercontent ul li:nth-of-type(3) .it, #orders #alles .orderitem .ordercontent ul li:nth-of-type(1) li:nth-of-type(3) .it, #orders #alles .orderitem .ordercontent ul li:nth-of-type(3) li:nth-of-type(1) .it, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) li:nth-of-type(3) .it, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) li:nth-of-type(1) .it, #orders #alles .orderitem .ordercontent ul li:nth-of-type(2) li:nth-of-type(3) .it, #orders #alles .orderitem .ordercontent ul li:nth-of-type(3) li:nth-of-type(2) .it, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) li:nth-of-type(3) .it, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) li:nth-of-type(2) .it, #orders #alles .orderitem .ordercontent ul li:nth-of-type(3) .it, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) .it, #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) .it, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) li:nth-of-type(3) .it, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) li:nth-of-type(1) .it, #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) li:nth-of-type(3) .it, #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) li:nth-of-type(1) .it, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) li:nth-of-type(3) .it, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) li:nth-of-type(2) .it, #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) li:nth-of-type(3) .it, #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) li:nth-of-type(2) .it, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) .it, #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) .it, #orders ul li .prijs, #orders #alles .orderitem .ordercontent ul li:nth-of-type(1) .prijs, #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) .prijs, #orders #alles .orderitem .ordercontent ul li:nth-of-type(2) .prijs, #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) .prijs, #orders #alles .orderitem .ordercontent ul li:nth-of-type(3) .prijs, #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) .prijs, #orders #alles .orderitem .ordercontent ul li:nth-of-type(1) .prijs, #orders #alles .orderitem .ordercontent ul li:nth-of-type(1) .prijs, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) .prijs, #orders #alles .orderitem .ordercontent ul li:nth-of-type(2) li:nth-of-type(1) .prijs, #orders #alles .orderitem .ordercontent ul li:nth-of-type(1) li:nth-of-type(2) .prijs, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) li:nth-of-type(1) .prijs, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) li:nth-of-type(2) .prijs, #orders #alles .orderitem .ordercontent ul li:nth-of-type(3) li:nth-of-type(1) .prijs, #orders #alles .orderitem .ordercontent ul li:nth-of-type(1) li:nth-of-type(3) .prijs, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) li:nth-of-type(1) .prijs, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) li:nth-of-type(3) .prijs, #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) .prijs, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) .prijs, #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) .prijs, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) li:nth-of-type(1) .prijs, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) li:nth-of-type(2) .prijs, #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) li:nth-of-type(1) .prijs, #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) li:nth-of-type(2) .prijs, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) li:nth-of-type(1) .prijs, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) li:nth-of-type(3) .prijs, #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) li:nth-of-type(1) .prijs, #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) li:nth-of-type(3) .prijs, #orders #alles .orderitem .ordercontent ul li:nth-of-type(2) .prijs, #orders #alles .orderitem .ordercontent ul li:nth-of-type(1) li:nth-of-type(2) .prijs, #orders #alles .orderitem .ordercontent ul li:nth-of-type(2) li:nth-of-type(1) .prijs, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) li:nth-of-type(2) .prijs, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) li:nth-of-type(1) .prijs, #orders #alles .orderitem .ordercontent ul li:nth-of-type(2) .prijs, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) .prijs, #orders #alles .orderitem .ordercontent ul li:nth-of-type(3) li:nth-of-type(2) .prijs, #orders #alles .orderitem .ordercontent ul li:nth-of-type(2) li:nth-of-type(3) .prijs, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) li:nth-of-type(2) .prijs, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) li:nth-of-type(3) .prijs, #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) .prijs, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) li:nth-of-type(2) .prijs, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) li:nth-of-type(1) .prijs, #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) li:nth-of-type(2) .prijs, #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) li:nth-of-type(1) .prijs, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) .prijs, #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) .prijs, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) li:nth-of-type(2) .prijs, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) li:nth-of-type(3) .prijs, #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) li:nth-of-type(2) .prijs, #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) li:nth-of-type(3) .prijs, #orders #alles .orderitem .ordercontent ul li:nth-of-type(3) .prijs, #orders #alles .orderitem .ordercontent ul li:nth-of-type(1) li:nth-of-type(3) .prijs, #orders #alles .orderitem .ordercontent ul li:nth-of-type(3) li:nth-of-type(1) .prijs, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) li:nth-of-type(3) .prijs, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) li:nth-of-type(1) .prijs, #orders #alles .orderitem .ordercontent ul li:nth-of-type(2) li:nth-of-type(3) .prijs, #orders #alles .orderitem .ordercontent ul li:nth-of-type(3) li:nth-of-type(2) .prijs, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) li:nth-of-type(3) .prijs, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) li:nth-of-type(2) .prijs, #orders #alles .orderitem .ordercontent ul li:nth-of-type(3) .prijs, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) .prijs, #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) .prijs, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) li:nth-of-type(3) .prijs, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) li:nth-of-type(1) .prijs, #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) li:nth-of-type(3) .prijs, #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) li:nth-of-type(1) .prijs, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) li:nth-of-type(3) .prijs, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) li:nth-of-type(2) .prijs, #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) li:nth-of-type(3) .prijs, #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) li:nth-of-type(2) .prijs, #orders #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) .prijs, #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) .prijs {
+      display: inline-block;
+      color: #454656;
+      position: relative;
+      font-size: 12px;
+      font-size: 1.2rem; }
+    #orders ul li .tafel, #orders #alles .orderitem .ordercontent ul li:nth-of-type(1) .tafel, #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) .tafel, #orders #alles .orderitem .ordercontent ul li:nth-of-type(2) .tafel, #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) .tafel, #orders #alles .orderitem .ordercontent ul li:nth-of-type(3) .tafel, #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) .tafel {
+      float: left;
+      right: -50px;
+      color: #77db8f;
+      text-transform: uppercase;
+      font-weight: bold; }
+    #orders ul li .aantal, #orders #alles .orderitem .ordercontent ul li:nth-of-type(1) .aantal, #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) .aantal, #orders #alles .orderitem .ordercontent ul li:nth-of-type(2) .aantal, #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) .aantal, #orders #alles .orderitem .ordercontent ul li:nth-of-type(3) .aantal, #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) .aantal {
+      right: -400px;
+      float: left; }
+    #orders ul li .it, #orders #alles .orderitem .ordercontent ul li:nth-of-type(1) .it, #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) .it, #orders #alles .orderitem .ordercontent ul li:nth-of-type(2) .it, #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) .it, #orders #alles .orderitem .ordercontent ul li:nth-of-type(3) .it, #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) .it {
+      right: -500px;
+      float: left; }
+    #orders ul li .prijs, #orders #alles .orderitem .ordercontent ul li:nth-of-type(1) .prijs, #alles .orderitem .ordercontent #orders ul li:nth-of-type(1) .prijs, #orders #alles .orderitem .ordercontent ul li:nth-of-type(2) .prijs, #alles .orderitem .ordercontent #orders ul li:nth-of-type(2) .prijs, #orders #alles .orderitem .ordercontent ul li:nth-of-type(3) .prijs, #alles .orderitem .ordercontent #orders ul li:nth-of-type(3) .prijs {
+      float: right;
+      right: 30px; }
+  #orders ul #totdiv {
+    text-align: right; }
+    #orders ul #totdiv #totaal {
+      border-top: 1px dashed #35c858;
+      margin-bottom: 10px;
+      padding-right: 30px;
+      padding-top: 10px;
+      text-transform: uppercase;
+      color: #35c858;
+      font-size: 13px;
+      font-size: 1.3rem; }
+    #orders ul #totdiv .print {
+      height: 35px;
+      width: 60px;
+      margin-right: 30px;
+      border-color: none;
+      border: none;
+      outline: none;
+      outline-width: 0;
+      background-color: #454656;
+      color: white;
+      cursor: pointer;
+      -webkit-border-radius: 8px;
+      -moz-border-radius: 8px;
+      -ms-border-radius: 8px;
+      border-radius: 8px;
+      font-size: 10px;
+      font-size: 1rem; }
+
+#alles .orderitem {
+  border: 1px dashed #35c858;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 0px 0px 10px 0px;
+  text-align: left; }
+  #alles .orderitem .wanneer {
+    border-bottom: 1px dashed #35c858;
+    padding: 10px 0px 10px 0px;
+    margin-bottom: 10px;
+    background-color: rgba(119, 219, 143, 0.6); }
+    #alles .orderitem .wanneer p, #alles .orderitem .wanneer p:nth-of-type(1), #alles .orderitem .wanneer p:nth-of-type(2), #alles .orderitem .wanneer p:nth-of-type(3) {
+      display: inline-block;
+      font-size: 12px;
+      font-size: 1.2rem;
+      position: relative;
+      color: white;
+      text-transform: uppercase; }
+    #alles .orderitem .wanneer p:nth-of-type(1) {
+      right: -50px; }
+    #alles .orderitem .wanneer p:nth-of-type(2) {
+      right: -600px; }
+    #alles .orderitem .wanneer p:nth-of-type(3) {
+      right: -650px; }
+  #alles .orderitem .ordercontent {
+    color: #454656; }
+    #alles .orderitem .ordercontent ul {
+      height: 25px; }
+      #alles .orderitem .ordercontent ul li, #alles .orderitem .ordercontent ul li:nth-of-type(1), #alles .orderitem .ordercontent ul li:nth-of-type(2), #alles .orderitem .ordercontent ul li:nth-of-type(3) {
+        display: inline-block;
+        position: relative; }
+      #alles .orderitem .ordercontent ul li:nth-of-type(1) {
+        float: left;
+        right: -50px; }
+      #alles .orderitem .ordercontent ul li:nth-of-type(2) {
+        float: left;
+        right: -80px; }
+      #alles .orderitem .ordercontent ul li:nth-of-type(3) {
+        left: -500px;
+        float: right; }
+
+#login form {
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto; }
+  #login form input {
+    display: block;
+    padding: 5px;
+    margin: 10px 10px 10px 10px;
+    width: 250px;
+    height: 30px;
+    border: 2.5px solid #025960;
+    outline-color: #77db8f;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-size: 1rem;
+    color: #025960; }
+  #login form #login {
+    border-color: none;
+    border: none;
+    outline: none;
+    outline-width: 0;
+    width: 100px;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-size: 1rem;
+    background-color: #ff8155;
+    color: white;
+    font-weight: bold;
+    cursor: pointer; }

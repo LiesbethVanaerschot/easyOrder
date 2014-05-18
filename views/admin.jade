@@ -1,0 +1,17 @@
+extends layout
+
+block content
+ div(class='container')
+  header
+   h1 Admin login Beans Bar
+   a(href='/') Menu
+
+  section(id='login')
+   form(action='/login', method='post')
+    input(type='text', name='username', placeholder='Admin')
+    input(type='password', name='password', placeholder='Paswoord')
+    input#login(type='submit', value='login') 
+
+ script(src = '//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
+ script(src = '../javascripts/script.js')
+ script(src = 'http://easyorder.herokuapp.com/faye/client.js')  

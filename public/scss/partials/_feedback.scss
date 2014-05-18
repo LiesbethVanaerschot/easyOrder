@@ -1,0 +1,163 @@
+#feedbackcontent{
+	width: 280px;
+	margin-left: auto;
+	margin-right: auto;
+
+	h3{
+		@include font-size(1.4);
+		margin-bottom: 20px;
+		color: $textcolor;
+	}
+
+	.wacht{
+		margin-bottom: 40px;
+		padding: 0px 10px 0px 10px;
+		@include font-size(0.8);
+		color: $textcolor;
+	}
+
+	#movingBallG{
+	position: relative;
+		margin-left: auto;
+		margin-right: auto;
+		width:100px;
+		height:8px;
+
+		.movingBallLineG{
+			position:absolute;
+			left:0px;
+			top:3px;
+			height:1px;
+			width:100px;
+			background-color:#EB6B09;
+		}
+
+		.movingBallG{
+			background-color:#EB6B09;
+			position:absolute;
+			top:0;
+			left:0;
+			width:10px;
+			height:10px;
+			@include border-radius(50%);
+			@include animation-name(bounce_movingBallG);
+			@include animation-duration(2.6s);
+			@include animation-iteration-count(infinite);
+			@include animation-direction(linear);
+		}
+	}
+
+	#feedback{
+		border: 2px dotted $input-color;
+		padding: 10px 5px 10px 5px;
+		margin: 0px 10px 0px 10px;
+		color: $textcolor;
+
+		span{
+			text-transform: uppercase;
+			color: $input-color;
+			@include font-size(1.2);
+			margin: 5px 0px 5px 0px;
+		}
+	}
+}
+
+#terugmenu
+{
+	margin-top: 50px;
+	text-transform: uppercase;
+	color: $header-color;
+	font-weight: bold;
+	a{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 20px;
+		width: 80px;
+		padding: 5px;
+		background-color: $lgcolor;
+		text-decoration: none;
+		color: white;
+		font-weight: normal;
+		@include font-size(1.4);
+		@include border-radius(6px);
+	}
+}
+
+
+
+@-moz-keyframes bounce_movingBallG{
+0%{
+left:0px;
+}
+
+50%{
+left:92px;
+}
+
+100%{
+left:0px;
+}
+
+}
+
+@-webkit-keyframes bounce_movingBallG{
+0%{
+left:0px;
+}
+
+50%{
+left:92px;
+}
+
+100%{
+left:0px;
+}
+
+}
+
+@-ms-keyframes bounce_movingBallG{
+0%{
+left:0px;
+}
+
+50%{
+left:92px;
+}
+
+100%{
+left:0px;
+}
+
+}
+
+@-o-keyframes bounce_movingBallG{
+0%{
+left:0px;
+}
+
+50%{
+left:92px;
+}
+
+100%{
+left:0px;
+}
+
+}
+
+@keyframes bounce_movingBallG{
+0%{
+left:0px;
+}
+
+50%{
+left:92px;
+}
+
+100%{
+left:0px;
+}
+
+}
+

@@ -1,0 +1,152 @@
+extends layout
+
+block content
+ div(class='container')
+  header
+   h1 Welkom bij Beans Bar
+   a(href='/admin') Admin
+
+  nav#bestelnav
+   
+   
+    form(action = '')
+     label(for='tafel') Tafel?
+     input(type='text', id = 'tafel' placeholder = '#')
+     input(type='button', id = 'bestel' value='bestel')
+
+  div#error
+   p
+
+  section(id='menu')
+   ul.large-accordion
+     li
+      a(id='drink', class='lijst') Drinken
+      ul.drinken.accordion
+        if(Drinken.length)
+         each cat in Drinken
+          li(class='drinkcat', id=cat._id)
+           a=cat.cat
+           ul.miniaccordion
+            case cat._id
+             when "drink_1"
+              each koffie in Koffie
+               li(class='koffiecat', id=koffie._id)
+                a.koffie=koffie.naam
+                ul.mini-sub
+                 case koffie._id
+                  when "koffie_1"
+                   each zwart in Zwart
+                    li.product
+                     div.item= zwart.naam
+                     div= '€' + zwart.prijs
+                     div
+                      input(type='text', placeholder='#')
+                  when "koffie_2"
+                   each metmelk in metMelk
+                    li.product 
+                     div.item= metmelk.naam
+                     div= '€' + metmelk.prijs
+                     div
+                      input(type='text', placeholder='#') 
+                  when "koffie_3"
+                   each special in Specials
+                    li.product
+                     div.item= special.naam
+                     div= '€' + special.prijs
+                     div
+                      input(type='text', placeholder='#')   
+             when "drink_2"
+              each thee in Thee
+               li.product
+                div.item= thee.naam
+                div= '€' + thee.prijs
+                div
+                 input(type='text', placeholder='#')
+             when "drink_3"
+              each melk in Melk
+               li.product
+                div.item= melk.naam
+                div= '€' + melk.prijs 
+                div
+                 input(type='text', placeholder='#') 
+             when "drink_4"
+              each sap in Sappen
+               li.product
+                div.item= sap.naam
+                div= '€' + sap.prijs
+                div
+                 input(type='text', placeholder='#')
+             when "drink_5"
+              each fris in Frisdrank
+               li.product
+                div.item= fris.naam
+                div= '€' + fris.prijs
+                div
+                 input(type='text', placeholder='#')
+             when "drink_6"
+              each alcohol in Alcohol
+               li.product
+                div.item= alcohol.naam
+                div= '€' + alcohol.prijs
+                div
+                 input(type='text', placeholder='#')
+             when "drink_7"
+              each ijs in Ijskoffie
+               li.product
+                div.item= ijs.naam
+                div= '€' + ijs.prijs
+                div
+                 input(type='text', placeholder='#')
+        else
+         p Er is geen Drinken.  
+
+     li
+      a(id='eten', class='lijst') Eten
+      ul.eten.accordion
+        if(Eten.length)
+         each cat in Eten
+          li(class='etencat', id=cat._id)
+           a=cat.cat
+           ul.miniaccordion
+            case cat._id
+             when "eten_1"
+              each ontbijt in Ontbijt
+               li.product
+                div.item= ontbijt.naam
+                div= '€' + ontbijt.prijs
+                div
+                 input(type='text', placeholder='#')
+             when "eten_2"
+              each bagel in Bagels
+               li.product
+                div.item= bagel.naam
+                div= '€' + bagel.prijs
+                div
+                 input(type='text', placeholder='#')
+             when "eten_3"
+              each wrap in Wraps
+               li.product
+                div.item= wrap.naam 
+                div= '€' + wrap.prijs
+                div
+                 input(type='text', placeholder='#')
+             when "eten_4"
+              each soep in Soep
+               li.product
+                div.item= soep.naam
+                div= '€' + soep.prijs
+                div
+                 input(type='text', placeholder='#')
+             when "eten_5"
+              each yoghurt in Yoghurt
+               li.product
+                div.item= yoghurt.naam
+                div= '€' + yoghurt.prijs
+                div
+                 input(type='text', placeholder='#')
+        else
+         p Er is geen Eten.
+
+ script(src = '//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
+ script(src = '../javascripts/script.js')
+ script(src = 'http://easyorder.herokuapp.com/faye/client.js')

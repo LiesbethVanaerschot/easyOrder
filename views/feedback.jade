@@ -1,0 +1,20 @@
+extends layout
+
+block content
+ div(class='container')
+  header
+   h1 Welkom bij Beans Bar
+  div#feedbackcontent
+   h3 Een bestelling geplaatst?
+   p.wacht Wanneer we uw bestelling goed hebben ontvangen laten we u dit meteen weten!
+   div(id = 'movingBallG')
+    div(class="movingBallLineG") 
+    div(id="movingBallG_1", class="movingBallG") 
+   div(id = 'feedback')
+    
+  p#terugmenu Terug naar: 
+   a(href='/') MENU 
+
+ script(src = '//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
+ script(src = '../javascripts/script.js')
+ script(src = 'http://easyorder.herokuapp.com/faye/client.js')  

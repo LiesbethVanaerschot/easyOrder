@@ -1,0 +1,41 @@
+extends layout
+
+block content
+ div(class='container')
+  header
+   h1 Beans Bar bestellingen
+   form(method='get', action='/logout')
+    input(id='logout', type='submit', value='logout') 
+ 
+  nav(class = 'tabs')
+   ul(class = 'tab-links')
+    li(class = 'tabactive')
+     a(href = '#orders') Nieuw
+    li
+     a(href = '#alles') Alles 
+
+
+  div(class = 'tab-content')
+   div(id ='orders', class = 'tab') 
+    
+   div(id ='alles', class = 'tab')
+    if(bestellingen.length)
+     each order in bestellingen
+      div.orderitem
+       div.wanneer
+         p= 'Tafel ' + order.tafelnummer
+         p= 'Op ' + order.datum
+         p= 'Om ' + order.tijd
+       div.ordercontent
+        if order.bestelling
+          for item in order.bestelling
+            ul
+             li=item.aantal + ' X'
+             li=item.product
+             li=item.prijs
+    else
+       p Er zijn geen bestellingen.
+
+ script(src = '//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
+ script(src = '../javascripts/script.js')
+ script(src = 'http://easyorder.herokuapp.com/faye/client.js')

@@ -1,0 +1,37 @@
+#login{
+	form{
+		width: 280px;
+		margin-left: auto;
+		margin-right: auto;
+
+		input{
+			display: block;
+			padding: 5px;
+			margin: 10px 10px 10px 10px;
+			width: 250px;
+			height: 30px;
+			border: 2.5px solid $header-color;
+			outline-color: $bestelbtn;
+			@include border-radius(4px);
+			@include font-size(1);
+			color: $header-color;
+		}
+
+		#login{
+			border-color: none;
+			border: none;
+			outline: none;
+			outline-width:0;
+			width: 100px;
+			text-transform: uppercase;
+			@include font-size(1);
+			background-color: $input-color;
+			color: white;
+			font-weight: bold;
+			cursor: pointer;
+
+		}
+
+
+	}
+}

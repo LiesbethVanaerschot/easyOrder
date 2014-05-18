@@ -1,0 +1,72 @@
+/*ALGEMEEN*/
+$bgcolor: #e2f4ee;
+$fontfam: "Helvetica Neue", sans-serif;
+$header-color: #025960;
+$link-color: rgba(3,136,146,0.7);
+
+/*MENU*/
+$lgcolor: #ffe491;
+$acc-color: #038892;
+$acc-hover: rgba(3,136,146,0.5);
+$miniacc-color: #04b7c4;
+$miniacc-hover: rgba(4,183,196,0.5);
+$product-color: #FF4200;
+$bestel-color: rgba(255,66,0,0.8);
+$input-color: #ff8155;
+$bestelbtn: #77db8f;
+
+/*ORDER*/
+$tabactive: #FF4200;
+$bestelling-border: #35c858;
+$bestelling-color: rgba(119,219,143,0.6);
+$tafel-color: #77db8f;
+
+/*FEEDBACK*/
+$textcolor: #454656;
+
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin animation-name($name){
+	-webkit-animation-name: $name;
+    -moz-animation-name: $name;
+    -ms-animation-name: $name;
+    animation-name: $name;
+}
+
+@mixin animation-duration($duration){
+	-webkit-animation-duration: $duration;
+    -moz-animation-duration: $duration;
+    -ms-animation-duration: $duration;
+    animation-duration: $duration;
+}
+
+@mixin animation-iteration-count($iteration){
+	-webkit-animation-iteration-count: $iteration;
+    -moz-animation-iteration-count: $iteration;
+    -ms-animation-iteration-count: $iteration;
+    animation-iteration-count: $iteration;
+}
+
+@mixin animation-direction($direction){
+	-webkit-animation-direction: $direction;
+    -moz-animation-direction: $direction;
+    -ms-animation-direction: $direction;
+    animation-direction: $direction;
+}
+
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+
+@import 'base';
+@import 'partials/accordion';
+@import 'partials/menu';
+@import 'partials/feedback';
+@import 'partials/order';
+@import 'partials/adminlogin';

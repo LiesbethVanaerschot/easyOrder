@@ -1,0 +1,196 @@
+.tabs{
+	text-align:left;
+	margin-bottom : 20px;
+	ul{
+
+		li{
+			display: inline-block;
+			margin: 5px;
+			padding: 8px;
+			background-color: $input-color;
+			@include border-radius(4px);
+
+			a{
+				text-decoration: none;
+				@include font-size(1.1);
+				color: white;
+				text-transform: uppercase;
+				cursor: pointer;
+			}
+
+		}
+
+		.tabactive{
+			background-color: $tabactive;
+		}
+
+	}
+	
+}
+
+.tab{
+	display:none;
+}
+
+.tab.tabactive{
+	display:block;
+}
+
+#orders{
+	
+	ul{
+		border: 1px dashed $bestelling-border;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		padding: 0px 0px 10px 0px;
+		text-align: left;
+
+		li{
+			
+			padding: 5px;
+			height: 20px;
+
+			.neworder{
+				display: inline-block;
+				color: $textcolor;
+				position: relative;
+
+				@include font-size(1.2);
+			}
+
+			.tafel{
+				@extend .neworder;
+				float: left;
+				right: -50px;
+				color: $tafel-color;
+				text-transform: uppercase;
+				font-weight: bold;
+			}
+
+			.aantal{
+				@extend .neworder;
+				right: -400px;
+				float: left;
+			}
+
+			.it{
+				@extend .neworder;
+				right: -500px;
+				float: left;
+			}
+
+			.prijs{
+				@extend .neworder;
+				float: right;
+				right: 30px;
+			}
+		}
+
+		#totdiv{
+
+			text-align: right;
+
+			#totaal{
+			border-top: 1px dashed $bestelling-border;
+			margin-bottom: 10px;
+			padding-right: 30px;
+			padding-top: 10px;
+			text-transform: uppercase;
+			color: $bestelling-border;
+			@include font-size(1.3);
+			}
+
+			.print{
+				height: 35px;
+				width: 60px;
+				margin-right: 30px;
+				border-color: none;
+				border: none;
+				outline: none;
+				outline-width:0;
+				background-color: $textcolor;
+				color: white;
+				cursor: pointer;
+				@include border-radius(8px);
+				@include font-size(1);
+			}
+		}
+
+	}
+
+}
+
+#alles{
+	.orderitem{
+		border: 1px dashed $bestelling-border;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		padding: 0px 0px 10px 0px;
+		text-align: left;
+
+		.wanneer{
+
+			border-bottom: 1px dashed $bestelling-border;
+			padding: 10px 0px 10px 0px;
+			margin-bottom: 10px;
+			background-color: $bestelling-color;
+
+			p{
+			display: inline-block;
+			@include font-size(1.2);
+			position: relative;
+			color: white;
+			text-transform: uppercase;
+			}
+
+			p:nth-of-type(1){
+				@extend p;
+				right: -50px;
+			}
+
+			p:nth-of-type(2){
+				@extend p;
+				right: -600px;
+				
+			}
+
+			p:nth-of-type(3){
+				@extend p;
+				right: -650px;
+			}
+		}
+
+		.ordercontent{
+			color: $textcolor;
+			ul{
+
+				height: 25px;
+
+				li{
+					display: inline-block;
+					position: relative;
+				}
+
+				li:nth-of-type(1){
+					@extend li;
+					float: left;
+					right: -50px;
+				}
+
+				li:nth-of-type(2){
+					@extend li;
+					float: left;
+					right: -80px;
+				}
+
+				li:nth-of-type(3){
+					@extend li;
+					left: -500px;
+					float: right;
+				}
+			}
+			
+		}
+		
+	}
+}

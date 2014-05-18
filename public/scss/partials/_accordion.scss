@@ -1,0 +1,172 @@
+#menu{
+	min-width: 280px;
+	margin-top: 20px;
+	cursor: pointer;
+	.large-accordion{
+		> li{
+			margin-bottom: 5px;
+		}
+
+		li > .accordion{
+			display: none;
+		}
+
+		li:target > .accordion{
+			display: block;
+		}
+
+		.lijst{
+			display: inline-block;
+			/*height: 25px;*/
+			padding: 10px 5px 10px 5px;
+			text-align: left;
+			text-transform: uppercase;
+		}
+
+		#eten, #drink{
+			@extend a;
+			background-color: $lgcolor;
+			border: 3px solid #ffdf80;
+			@include font-size(1.6);
+			color: #fff;
+			margin-bottom: 5px;
+			width: 278px;
+		}
+	}
+
+	.accordion{
+		li > .miniaccordion{
+			display: none;
+		}
+
+		li:target > .miniaccordion{
+			display: block;
+		}
+
+		a{
+			@extend .lijst;
+			margin-top: 1px;
+			margin-bottom: -1px;
+			border-top: 1.5px dashed $acc-color;
+			border-left: 1.5px dashed $acc-color;
+			border-right: 1.5px dashed $acc-color;
+			width: 280px;
+		}
+
+		> :last-child a{
+			@extend a;
+			border-bottom: 1.5px dashed $acc-color;
+		
+		}
+
+		a:hover{
+			background-color: $acc-hover;
+		}
+	}
+
+	.miniaccordion{
+		li > .mini-sub{
+			display: none;
+		}
+
+		li:target > .mini-sub{
+			display: block;
+		}
+
+		.koffie{
+			@extend .lijst;
+			margin-top: 1px;
+			margin-bottom: -1px;
+			border-top: 1.5px dashed $miniacc-color;
+			border-left: 1.5px dashed $miniacc-color;
+			border-right: 1.5px dashed $miniacc-color;
+			min-width: 280px;
+		}
+
+		> :first-child a{
+			margin-top: 5px;
+		}
+
+		> :last-child a{
+			@extend .koffie;
+			border-bottom: 1.5px dashed $miniacc-color;
+			margin-bottom: 5px;
+		}
+
+		.koffie:hover{
+			background-color: $miniacc-hover;
+		}
+
+		.product{
+			text-align: left;
+			margin-left: auto;
+			margin-right: auto;
+			width: 280px;
+			padding: 0px 5px 0px 5px;
+			border-top: 2px solid $product-color;
+			border-left: 2px solid $product-color;
+			border-right: 2px solid $product-color;
+			height:36px;
+			@include font-size(0.8);
+
+			div{
+				display: inline-block;
+				vertical-align: middle;
+				
+			}
+
+			.item{
+				@extend div;
+				/*position: relative;
+				left: 10px;*/
+
+			}
+
+			div:nth-of-type(1){
+				padding: 11px 0px 11px 0px;
+				height: 14px;
+				position: relative;
+				left: -30px;
+			}
+
+			div:nth-of-type(2){
+				padding: 11px 5px 11px 0px;
+				height: 14px;
+				float: left;
+				position: relative;
+				left: 210px;
+			}
+
+			div:nth-of-type(3){
+				float: right;
+				padding: 4px 0px 4px 0px;
+				position: relative;
+				left: -5px;
+
+				input{
+				width: 13px;
+				height: 24px;
+				padding: 0px 5px 0px 5px;
+				text-align: right;
+				vertical-align: middle;
+				border: 3px solid $input-color;
+				outline-style: none;
+				@include border-radius(6px);
+				}
+			}
+			
+		}
+
+		.product:nth-of-type(1){
+			margin-top: 5px;
+		}
+
+		.product:last-of-type{
+			@extend .product;
+			border-bottom: 2px solid $product-color;
+			margin-bottom: 5px;
+		}
+
+	}
+
+}
